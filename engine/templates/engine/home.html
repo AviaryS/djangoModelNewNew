@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'create' %}">Добавить пост</a>
+    {% for post in posts %}
+    <p>Заголовок: {{post.title}}</p>
+    <p>Текст: {{post.text}}</p>
+    <p>Автор: {{post.author}}</p>
+    <p>Издательство: {{post.publisher}}</p>
+    <p>Категория: {{post.category}}</p>
+    <br>
+    {% endfor %}
+</body>
+</html>
